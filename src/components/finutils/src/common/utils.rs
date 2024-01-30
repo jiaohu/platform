@@ -517,7 +517,7 @@ fn get_owned_utxos(
     get_owned_utxos_x(None, addr).c(d!())
 }
 
-fn get_owned_utxos_x(
+pub fn get_owned_utxos_x(
     rpc_endpoint: Option<&str>,
     addr: &XfrPublicKey,
 ) -> Result<HashMap<TxoSID, (Utxo, Option<OwnerMemo>)>> {
